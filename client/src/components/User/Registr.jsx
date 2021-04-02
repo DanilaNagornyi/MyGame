@@ -1,9 +1,10 @@
+import './style.css'
+
 const Registration = () => {
-  return ( 
-    <div>
-      Registration
-    </div>
-   );
+  return (
+    <>
+    </>
+  );
 }
  
 export default Registration;
