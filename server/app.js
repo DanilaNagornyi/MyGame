@@ -34,7 +34,9 @@ app.use(session(sessionConfig));
 
 app.get('/api/v1/alTitle', async (req, res) => {
   // const allTitles = await Title.find();
-  const allTitles = [1, 'question 2', 'hffghsfg']
+  const allTitles = [{title: 'Тема 1', 
+  questions: [ {question: 'Вопрос 1', answer: 'Ответ 1', score: 100}, {question: 'Вопрос 2', answer: 'Ответ 2', score: 200}, {question: 'Вопрос 3', answer: 'Ответ 3', score: 300},
+  ]}, ]
   res.status(200).json( allTitles );
 });
 

@@ -6,3 +6,10 @@ export const allTopics = (topics) => {
     payload: topics
   }
 }
+
+export const changeScore = (score) => {
+  return {
+    type: CHANGE_SCORE,
+    payload: score
+  }
+}

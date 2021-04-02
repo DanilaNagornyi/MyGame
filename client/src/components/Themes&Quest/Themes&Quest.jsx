@@ -1,14 +1,4 @@
 import { useEffect } from "react";
-<<<<<<< HEAD
-
-const Themes = () => {
-
-  useEffect(()=> {
-    fetch('http://localhost:3000/api/v1/alTitle')
-    .then(res => res.json())
-    .then()
-  })
-=======
 import { useDispatch, useSelector } from "react-redux";
 import { allTopics } from "../../redux/actionsCreate/gameActions";
 
@@ -27,9 +17,26 @@ const Themes = () => {
         
   }, []);
 
+  const submitAnswerHandler = async (score, answer, id) => {
+
+    const response = await fetch('/http://localhost:3000/api/v1/answer', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({answer, id})
+    })
+
+    if (response.ok === 200) {
+      console.log('Ответ верен')
+      dispatch(changeScore(score));
+    } else {
+      console.log('Ответ не верен')
+    }
+  }
+
   console.log(topics);
 
->>>>>>> ayuna
   return ( 
     <div>
       Themes

@@ -1,4 +1,4 @@
-import { ALL_TOPICS } from '../types/gameTypes'
+import { ALL_TOPICS, CHANGE_SCORE } from '../types/gameTypes'
 
 
 const gameReducer = (state = [], action) => {
