@@ -19,7 +19,7 @@ const Navbar = () => {
   <header id="header" className="fixed-top ">
     <div className="container d-flex align-items-center justify-content-lg-between">
 
-      <h1 className="logo me-auto me-lg-0"><a href="index.html">Gp<span>.</span></a></h1>
+      <h1 className="logo me-auto me-lg-0"><a href="index.html">VG<span>.</span></a></h1>
       {/* <!-- Uncomment below if you prefer to use an image logo --> */}
       {/* <!-- <a href="index.html" className="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" className="img-fluid"></a>--> */}
 
@@ -28,9 +28,6 @@ const Navbar = () => {
           <li><Link className="nav-link scrollto active" to="/">Home</Link></li>
           <li><a className="nav-link scrollto" href="#about">Sign Up</a></li>
           <li><a className="nav-link scrollto" href="#services">Sign In</a></li>
-
-
-          <li><Link  className="nav-link scrollto" to="test">Test</Link></li>
         </ul>
         <i className="bi bi-list mobile-nav-toggle"></i>
       </nav>
