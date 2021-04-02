@@ -33,9 +33,8 @@ app.use(session(sessionConfig));
 
 
 app.get('/api/v1/alTitle', async (req, res) => {
-  // const allTitles = await Title.find();
-  const allTitles = [1, 'question 2', 'hffghsfg']
-  res.status(200).json( allTitles );
+  const allTitles = await Title.find().populate('questions');
+  res.status(200).json(allTitles);
 });
 
 
@@ -44,7 +43,7 @@ app.post('/api/v1/answer', async (req, res) => {
 
   const question = await Question.findById(req.body.id);
   if (answer === question.answer) {
-    
+
     res.sendStatus(200);
   }
   res.status(418);
