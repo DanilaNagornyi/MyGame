@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { allTopics } from "../../redux/actionsCreate/gameActions";
+import Question from "../Question/Question";
 
 const Themes = () => {
 
@@ -11,19 +12,30 @@ const Themes = () => {
 
   useEffect(() => {
     // получаем topics с бэка
-      fetch("http://localhost:3000/api/v1/alTitle")
-        .then(response => response.json())
-        .then(topics => dispatch(allTopics(topics)))
-        
+    fetch("http://localhost:3000/api/v1/alTitle")
+      .then(response => response.json())
+      .then(topics => dispatch(allTopics(topics)))
+
   }, []);
 
   console.log(topics);
 
-  return ( 
+  return (
+
     <div>
-      Themes
+      {
+        topics.length ?
+          topics.map(el => {
+            return (
+              <>
+                <div key={el._id}>{el.title}</div>
+                <Question questions={el.questions} />
+              </>
+            )
+          }) : <p>nothing</p>
+      }
     </div>
-   );
+  );
 }
- 
+
 export default Themes;
