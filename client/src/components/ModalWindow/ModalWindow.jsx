@@ -6,7 +6,7 @@ const MODAL_STYLES = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  backgroundColor: '#FFF',
+  backgroundColor: 'rgba(255, 255, 255, .8)',
   padding: '50px',
   zIndex: 1000
 }
@@ -21,6 +21,10 @@ const OVERLAY_STYLES = {
   zIndex: 1000
 }
 
+const BUTTON_STYLES = {
+  
+}
+
 const ModalWindow = ({ open, children, onClose }) => {
   if (!open) return null
 
@@ -31,7 +35,7 @@ const ModalWindow = ({ open, children, onClose }) => {
         {children}
       <div></div>
         <input></input>
-      <button onClick={onClose} className="get-started-btn scrollto d-flex">Done</button>
+      <button onClick={onClose} className="get-started-btn scrollto mx-2">Done</button>
       </div>
     </>,
     document.getElementById('portal')
