@@ -37,6 +37,10 @@ app.get('/api/v1/alTitle', async (req, res) => {
   res.status(200).json(allTitles);
 });
 
+app.get('/api/v1/:id', async (req, res) => {
+  const question = await Question.findById(req.params.id);
+  res.json(question);
+});
 
 app.post('/api/v1/answer', async (req, res) => {
   const { answer, id } = req.body;

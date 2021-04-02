@@ -3,7 +3,9 @@ const initState = () => {
     topics: [],
     questions: [],
     answer: {},
-    score: null
+    score: null,
+    currentQuestionID: null,
+    question: {}
   }
 
   const fromLS = JSON.parse(window.localStorage.getItem('myApp'))
