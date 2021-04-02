@@ -6,6 +6,7 @@ const session = require('express-session');
 const Title = require('./db/title');
 const Question = require('./db/questions');
 const FileStore = require('session-file-store')(session);
+const cors = require('cors');
 
 // const booksRouter = require('./routes/allBooks');
 
@@ -17,6 +18,7 @@ const port = process.env.PORT ?? 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(morgan('dev'));
+app.use(cors());
 
 const sessionConfig = {
   store: new FileStore(),
@@ -29,8 +31,9 @@ const sessionConfig = {
 
 app.use(session(sessionConfig));
 app.get('/api/v1/alTitle', async (req, res) => {
-  const allTitles = await Title.find();
-  res.status(200).json({ allTitles });
+  // const allTitles = await Title.find();
+  const allTitles = [1, 'question 2', 'hffghsfg']
+  res.status(200).json( allTitles );
 });
 
 
