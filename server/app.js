@@ -28,6 +28,8 @@ const sessionConfig = {
 };
 
 app.use(session(sessionConfig));
+
+
 app.get('/api/v1/alTitle', async (req, res) => {
   const allTitles = await Title.find();
   res.status(200).json({ allTitles });
