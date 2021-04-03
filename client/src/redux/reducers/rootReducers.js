@@ -1,10 +1,13 @@
 import { combineReducers } from 'redux';
+import currentQuestionReducer from './currentQuestionReducer';
 import gameReducer from './gameReducers';
-import scoreReducer from './scoreReducer'
+import questionReducer from './questionReducer';
 
 const rootReducer = combineReducers({
   topics: gameReducer,
-  score: scoreReducer,
+  currentQuestionID: currentQuestionReducer,
+  // score: counterReducer
+  question: questionReducer,
 })
 
 
