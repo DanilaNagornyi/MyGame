@@ -35,7 +35,7 @@ const GamePlace = () => {
     <>
       {/* <!-- ======= ONE LINE ======= --> */}
 
-      <>
+      {/* <> */}
         <div style={BUTTON_WRAPPER_STYLES} onClick={() => console.log('clicked')}>
 
 
@@ -45,7 +45,7 @@ const GamePlace = () => {
         </div>
 
 
-      </>
+      {/* </> */}
 
       <div className="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
         {
@@ -56,7 +56,7 @@ const GamePlace = () => {
                   {/* <title></title> */}
                   <div key={el._id} className="col-xl-2 col-md-4">
                     <div className="icon-box box-box">
-                      <i className="ri-store-line"></i>
+                      <i className="ri-calendar-todo-line"></i>
                       <h3><a href="">{el.title}</a></h3>
                     </div>
                   </div>
@@ -83,12 +83,12 @@ const GamePlace = () => {
         }
 
 
-        <div onClick={() => setIsOpen(true)} className="col-xl-2 col-md-4">
+        {/* <div onClick={() => setIsOpen(true)} className="col-xl-2 col-md-4">
           <div className="icon-box">
             <i className="ri-store-line"></i>
             <h3><a href="">Lorem Ipsum</a></h3>
           </div>
-        </div>
+        </div> */}
 
         {/*         
         <div className="col-xl-2 col-md-4">

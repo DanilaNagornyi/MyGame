@@ -44,13 +44,13 @@ app.get('/api/v1/:id', async (req, res) => {
 
 app.post('/api/v1/answer', async (req, res) => {
   const { answer, id } = req.body;
+  console.log(req.body);
 
   const question = await Question.findById(req.body.id);
   if (answer === question.answer) {
-
-    res.sendStatus(200);
+    return res.sendStatus(200);
   }
-  res.status(418);
+  return res.sendStatus(418);
 });
 //locals
 // app.use((req, res, next) => {
