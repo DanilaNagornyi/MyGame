@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,6 +12,7 @@ import ModalWindow from '../ModalWindow/ModalWindow';
 import Registration from '../User/Registr';
 
 const Navbar = () => {
+  const score = useSelector(state => state.score)
  
 
   return ( 
@@ -32,6 +34,8 @@ const Navbar = () => {
         <i className="bi bi-list mobile-nav-toggle"></i>
       </nav>
       {/* <!-- .navbar --> */}
+      <p className="get-started-btn scrollto">{score}</p>
+
 
       <Link to="/game" className="get-started-btn scrollto">Start Game</Link>
 
